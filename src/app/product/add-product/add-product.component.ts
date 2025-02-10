@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ECommerceService } from '../../services/e-commerce.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-add-product',
@@ -13,7 +13,7 @@ export class AddProductComponent {
     
     addProductForm:FormGroup;
 
-    constructor(private service:ECommerceService){
+    constructor(private service:ProductService){
       this.addProductForm = new FormGroup({
         id: new FormControl(null, Validators.required),
         name: new FormControl('', Validators.required),

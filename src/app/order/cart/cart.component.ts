@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ECommerceService } from '../../services/e-commerce.service';
 import { Product } from '../../models/models';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +11,7 @@ import { Product } from '../../models/models';
 })
 
 export class CartComponent implements OnInit {
-  constructor(private service:ECommerceService){}
+  constructor(private service:CartService){}
   cartList:Array<Product>=[];
   totalPrice:number=0;
   

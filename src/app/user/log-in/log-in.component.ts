@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { LoginService } from '../../services/login.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from '../../models/userModel';
-import { BehaviorSubject } from 'rxjs';
+
 
 @Component({
   selector: 'app-log-in',
